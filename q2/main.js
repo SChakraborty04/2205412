@@ -1,3 +1,4 @@
+require('dotenv').config(); 
 const express = require('express');
 const axios = require('axios');
 
@@ -5,7 +6,7 @@ const app = express();
 const PORT = 3000;
 const AUTH_HEADER = {
     headers: {
-        Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzQzNjA0MjAyLCJpYXQiOjE3NDM2MDM5MDIsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6ImJkZDNjNzY4LTNlZGYtNGFmZC1iZWRmLTVlOTk3Y2QwMjVkZSIsInN1YiI6IjIyMDU0MTJAa2lpdC5hYy5pbiJ9LCJlbWFpbCI6IjIyMDU0MTJAa2lpdC5hYy5pbiIsIm5hbWUiOiJzYW5kaXBhbiBjaGFrcmFib3J0eSIsInJvbGxObyI6IjIyMDU0MTIiLCJhY2Nlc3NDb2RlIjoibndwd3JaIiwiY2xpZW50SUQiOiJiZGQzYzc2OC0zZWRmLTRhZmQtYmVkZi01ZTk5N2NkMDI1ZGUiLCJjbGllbnRTZWNyZXQiOiJoQmFzdXZqQnplUWFTQ0NxIn0.BT7ZcqDLmh620_Qek0mTnKvES6d1mJ8q-LxpOISWNEw"
+        Authorization: process.env.AUTH_TOKEN
     }
 };
 
